@@ -1,0 +1,5 @@
+config.yml
+*.pem
+*.pub
+*.crt
+*.key
