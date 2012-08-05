@@ -81,9 +81,14 @@ class Remote
   end
 end
 
+# Grab the data to be backed up
 backup = Backup.new(`#{config['command']}`)
+
+# Establish a connection with the backup host
 dest = Remote.new(config)
+
+# Upload the key so we can decrypt the backup
 dest.upload("key", backup.encrypt_secret(config['path_to_public_key']))
+
+# Upload the encrypted backup
 dest.upload("backup", backup.encrypt_value)
-
-
