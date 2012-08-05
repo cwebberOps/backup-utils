@@ -26,7 +26,7 @@ It uses fog to backup to a Swift or Rackspace endpoint.
 The specific use case in mind was taking the output of slapcat in to
 backup an LDAP server.
 
-### restore.rb ###
+### retrieve_backup.rb ###
 
 This utility is configured using etc/config.yml and takes a private key
 path and a date as an input. It then returns the corresponding backup
